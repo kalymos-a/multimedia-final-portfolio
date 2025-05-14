@@ -1,23 +1,46 @@
-/* Base styles */
+/* =============================
+   Terminal Theme Variables
+============================= */
+:root {
+  --bg-color: #282c34;
+  --text-color: #528bff;
+  --prompt-color: #61AFEF;
+  --cursor-color: #528bff;
+  --link-color: #f2f4f5;
+  --placeholder-color: #636d83;
+  --header-bg: #282c34;
+  --border-color: #222;
+
+  /* Font */
+  --font-family: 'Courier New', Courier, monospace;
+  --font-size: 16px;
+}
+
+/* =============================
+   Base Styles
+============================= */
 body {
   margin: 0;
-  background-color: #2e3440;
-  color: #88c0d0;
-  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
   line-height: 1.6;
 }
 
 a {
-  color: #66ff66;
+  color: var(--link-color);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
 
-/* Terminal-like prompt elements */
+/* =============================
+   Terminal Prompts & Cursor
+============================= */
 .prompt {
-  color: #00ff00;
+  color: var(--prompt-color);
   font-weight: bold;
 }
 
@@ -25,7 +48,7 @@ a:hover {
   display: inline-block;
   width: 10px;
   height: 20px;
-  background: #33ff33;
+  background: var(--cursor-color);
   margin-left: 5px;
   animation: blink 1s infinite step-start;
 }
@@ -34,17 +57,19 @@ a:hover {
   50% { opacity: 0; }
 }
 
-/* Layout */
+/* =============================
+   Layout and Typography
+============================= */
 header.terminal-header,
 footer.terminal-footer {
   padding: 1rem 2rem;
-  background-color: #111;
-  border-bottom: 1px solid #222;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
   font-size: 1.2rem;
 }
 
 footer.terminal-footer {
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--border-color);
   border-bottom: none;
   margin-top: 2rem;
 }
@@ -60,4 +85,35 @@ section {
 .hero h1 {
   font-size: 2rem;
   white-space: pre-wrap;
+}
+
+/* =============================
+   Terminal Command Input
+============================= */
+.terminal-input {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--header-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.terminal-input .prompt {
+  margin-right: 10px;
+}
+
+#command-line {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 5px;
+  outline: none;
+}
+
+#command-line::placeholder {
+  color: var(--placeholder-color);
 }
