@@ -8,14 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div class="terminal">
-    <div class="terminal-header">user@portfolio:~$</div>
-    <div id="output"></div>
-    <div class="input-line">
-      <span class="prompt">user@portfolio:~$</span>
-      <span class="input-cursor" id="cursor"></span>
-    </div>
-  </div>
-    <script src="script.js"></script>
+  <header class="terminal-header">
+    <span class="prompt">user@portfolio:~$</span> ./start-portfolio
+    <span class="cursor"></span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 id="typing-text"></h1>
+    </section>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Put your text here lmaoooo</p>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Project One:</strong> A cool thingy that does X.</li>
+        <li><strong>Project Two:</strong> Another thingy that does Y.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="terminal-footer">
+    <span class="prompt">user@portfolio:~$</span> exit
+    <span class="cursor"></span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

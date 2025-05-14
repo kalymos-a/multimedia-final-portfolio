@@ -1,44 +1,63 @@
+/* Base styles */
 body {
   margin: 0;
-  background-color: #0f0f0f;
-  color: #33ff33;
+  background-color: #2e3440;
+  color: #88c0d0;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow: hidden;
+  line-height: 1.6;
 }
 
-.terminal {
-  padding: 20px;
-  height: 100vh;
-  box-sizing: border-box;
+a {
+  color: #66ff66;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-.terminal-header {
-  margin-bottom: 20px;
+/* Terminal-like prompt elements */
+.prompt {
+  color: #00ff00;
   font-weight: bold;
 }
 
-.input-line {
-  display: flex;
-  align-items: center;
-}
-
-.prompt {
-  margin-right: 5px;
-}
-
-.input-cursor {
+.cursor {
+  display: inline-block;
   width: 10px;
   height: 20px;
-  background-color: #33ff33;
-  animation: blink 1s step-start infinite;
+  background: #33ff33;
+  margin-left: 5px;
+  animation: blink 1s infinite step-start;
 }
 
 @keyframes blink {
   50% { opacity: 0; }
 }
 
-#output {
+/* Layout */
+header.terminal-header,
+footer.terminal-footer {
+  padding: 1rem 2rem;
+  background-color: #111;
+  border-bottom: 1px solid #222;
+  font-size: 1.2rem;
+}
+
+footer.terminal-footer {
+  border-top: 1px solid #222;
+  border-bottom: none;
+  margin-top: 2rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
   white-space: pre-wrap;
 }

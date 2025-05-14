@@ -1,28 +1,15 @@
-const output = document.getElementById("output");
+const text = "Welcome to my portfolio terminal-style website.";
+const typingTarget = document.getElementById("typing-text");
+let i = 0;
 
-const introText = [
-  "Welcome to my portfolio terminal.",
-  "Here you'll find my projects, experience, and more.",
-  "",
-  "Type 'help' to get started."
-];
-
-let lineIndex = 0;
-let charIndex = 0;
-
-function typeLine() {
-  if (lineIndex < introText.length) {
-    if (charIndex < introText[lineIndex].length) {
-      output.innerHTML += introText[lineIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(typeLine, 50);
-    } else {
-      output.innerHTML += "\n";
-      lineIndex++;
-      charIndex = 0;
-      setTimeout(typeLine, 300);
-    }
+function type() {
+  if (i < text.length) {
+    typingTarget.innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 50);
   }
 }
 
-window.onload = typeLine;
+window.onload = () => {
+  type();
+};
