@@ -69,5 +69,5 @@ const target = document.getElementById('hoverTarget');
    });
    target.addEventListener('mouseleave', () => {
      target.style.background = 'none';
-     target.style.color = 'white';
+     target.style.color = '#528bff';
    });
