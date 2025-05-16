@@ -167,14 +167,12 @@ section {
 
 /*Projects */
 
-.projects{
-  display: flex;
-}
-
 .imagecontainer{
   display: flex;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
-.lowpolycat{
-  width: 25%;
+.image, .imagetext{
+  width: 400px;
+  margin-left: 1rem;
 }
